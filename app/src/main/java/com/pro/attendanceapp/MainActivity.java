@@ -2,6 +2,7 @@ package com.pro.attendanceapp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -25,6 +26,12 @@ ArrayList<BranchItem> branchItems = new ArrayList<>();
 
         fab = findViewById(R.id.fab_main);
         fab.setOnClickListener(v->showDialog());
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+
+        branchAdapter = new BranchAdapter(this,branchItems);
 
     }
 

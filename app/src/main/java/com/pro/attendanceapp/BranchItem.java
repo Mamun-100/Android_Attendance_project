@@ -8,15 +8,18 @@ public class BranchItem {
         return branchName;
     }
 
-    public void setBranchName(String branchName) {
+    public void setBranchName(String branchName)
+    {
         this.branchName = branchName;
     }
 
     public String getDepartmentName() {
+
         return departmentName;
     }
 
     public void setDepartmentName(String departmentName) {
+
         this.departmentName = departmentName;
     }
 
